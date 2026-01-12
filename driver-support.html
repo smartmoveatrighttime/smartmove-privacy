@@ -113,6 +113,13 @@
             margin: 0;
             color: #666;
         }
+        .faq-item ul {
+            margin: 10px 0 0 20px;
+            color: #666;
+        }
+        .faq-item li {
+            margin-bottom: 5px;
+        }
         .category {
             background: white;
             border-radius: 12px;
@@ -154,6 +161,30 @@
             color: rgba(255,255,255,0.9);
             margin: 0;
         }
+        .tier-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .tier-table th, .tier-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .tier-table th {
+            background: #FFF8E7;
+            color: #3D2314;
+        }
+        .tier-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .tier-troop { background: #E0E0E0; color: #555; }
+        .tier-warrior { background: #FFD700; color: #5D3A2A; }
+        .tier-champion { background: linear-gradient(135deg, #B8860B, #FFD700); color: #3D2314; }
         .footer {
             text-align: center;
             padding: 20px;
@@ -190,7 +221,7 @@
         <!-- Emergency -->
         <div class="emergency-box">
             <h3>Emergency During Delivery?</h3>
-            <p>Use the Emergency button in the app or call local emergency services (999/995)</p>
+            <p>Use the Emergency button in the app or call Singapore Emergency Services: 999 (Police) / 995 (Ambulance/Fire)</p>
         </div>
 
         <!-- Getting Started -->
@@ -202,17 +233,35 @@
 
             <div class="faq-item">
                 <h4>How do I sign up as a driver?</h4>
-                <p>Download Smart Move Driver from the App Store or Google Play. Register with your phone number, complete your profile, upload required documents (ID, driver's license, vehicle registration), and wait for verification approval (usually 1-2 business days).</p>
+                <p>Download Smart Move Driver from the App Store or Google Play. Register with your Singapore (+65) or Malaysia (+60) phone number, verify via OTP, create your password, and complete your profile.</p>
             </div>
 
             <div class="faq-item">
-                <h4>What documents do I need?</h4>
-                <p>You'll need a valid driver's license, vehicle registration/insurance, a clear profile photo, and a photo of your vehicle. Additional documents may be required based on your region.</p>
+                <h4>What documents do I need for verification?</h4>
+                <p>You'll need to upload:</p>
+                <ul>
+                    <li>Driver's License (Front & Back)</li>
+                    <li>Identity Card / NRIC (Front & Back)</li>
+                    <li>Road Tax certificate</li>
+                    <li>Log Card (vehicle logbook)</li>
+                    <li>Vehicle Photos (Front, Back, Left, Right)</li>
+                    <li>Bank Account number or PayNow ID</li>
+                </ul>
             </div>
 
             <div class="faq-item">
                 <h4>How long does verification take?</h4>
-                <p>Document verification typically takes 1-2 business days. You'll receive a notification once approved. If additional information is needed, we'll contact you via the app.</p>
+                <p>Document verification typically takes 1-2 business days. You'll receive a push notification once approved. If documents are rejected, you can resubmit with corrections.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What vehicle types are supported?</h4>
+                <p>We support: Motorcycle, Car, Van, Lorry, and Bicycle. Select your vehicle type during registration to receive matching job offers.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I set up biometric login?</h4>
+                <p>Yes! After registration, you can enable Face ID (iOS) or Fingerprint (Android) for quick, secure login. Your biometric data stays on your device only.</p>
             </div>
         </div>
 
@@ -225,22 +274,67 @@
 
             <div class="faq-item">
                 <h4>How do I receive job offers?</h4>
-                <p>Make sure you're online in the app and location services are enabled. Jobs will appear based on your proximity to pickup locations. You can accept or decline offers based on your availability.</p>
+                <p>Go online in the app and ensure location services are set to "Always Allow". Jobs matching your vehicle type and location will appear. Accept or decline based on your availability.</p>
             </div>
 
             <div class="faq-item">
                 <h4>Can I cancel an accepted job?</h4>
-                <p>You can cancel before pickup, but frequent cancellations may affect your acceptance rate and tier status. If there's an emergency, contact support immediately.</p>
+                <p>You can cancel before pickup, but frequent cancellations affect your acceptance rate and may impact your tier status. For emergencies, contact support immediately.</p>
             </div>
 
             <div class="faq-item">
                 <h4>What if the customer is not available?</h4>
-                <p>Wait for the designated time shown in the app. Try calling the customer through the in-app call feature. If unreachable, follow the prompts to mark as "Customer Unavailable" and follow return instructions.</p>
+                <p>Wait the designated time shown in the app. Try calling through the in-app call feature. If still unreachable, tap "Customer Unavailable" and follow the return instructions.</p>
             </div>
 
             <div class="faq-item">
                 <h4>How do I handle fragile items?</h4>
-                <p>Items marked as "FRAGILE" require extra care. Use appropriate handling during pickup and delivery. Take photos of the package condition at pickup for your protection.</p>
+                <p>Items marked "FRAGILE" require extra care. Take photos of the package at pickup for your protection. Handle with care during transport and delivery.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How does proof of delivery work?</h4>
+                <p>At dropoff, you'll need to capture a photo and/or collect a signature from the recipient. This protects both you and the customer.</p>
+            </div>
+        </div>
+
+        <!-- Tier System -->
+        <div class="category">
+            <div class="category-title">
+                <div class="category-icon">⭐</div>
+                <span>Tier System</span>
+            </div>
+
+            <div class="faq-item">
+                <h4>How does the tier system work?</h4>
+                <p>Your tier is based on completed orders and ratings over the last 3 months:</p>
+                <table class="tier-table">
+                    <tr>
+                        <th>Tier</th>
+                        <th>Requirement</th>
+                        <th>Platform Fee</th>
+                    </tr>
+                    <tr>
+                        <td><span class="tier-badge tier-troop">Troop</span></td>
+                        <td>Starting tier</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tier-badge tier-warrior">Warrior</span></td>
+                        <td>300+ orders in 3 months</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tier-badge tier-champion">Champion</span></td>
+                        <td>600+ orders AND 4.8+ rating</td>
+                        <td>12%</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I lose my tier status?</h4>
+                <p>Tier status is evaluated monthly based on your last 3 months of performance. Maintain your order count and ratings to keep your tier.</p>
             </div>
         </div>
 
@@ -253,45 +347,58 @@
 
             <div class="faq-item">
                 <h4>How are my earnings calculated?</h4>
-                <p>Earnings are based on base fare + distance + any applicable bonuses. Your driver tier affects your earnings multiplier. View the breakdown for each completed job in your Earnings tab.</p>
+                <p>Earnings = Base fare + Distance fee - Platform fee (12-20% based on tier). View the breakdown for each job in your Earnings tab.</p>
             </div>
 
             <div class="faq-item">
                 <h4>How do I withdraw my earnings?</h4>
-                <p>Go to Earnings → Withdraw. Enter the amount and confirm. Withdrawals are processed via Stripe to your registered bank account. Processing typically takes 1-3 business days.</p>
+                <p>Go to Earnings → Withdraw. Enter the amount (minimum S$50, maximum S$10,000) and confirm. Funds are transferred to your registered bank account or PayNow within 1-3 business days.</p>
             </div>
 
             <div class="faq-item">
-                <h4>What is the minimum withdrawal amount?</h4>
-                <p>The minimum withdrawal amount is $10. There are no withdrawal fees charged by Smart Move.</p>
+                <h4>What payment methods are available for withdrawal?</h4>
+                <p>You can withdraw to your Singapore bank account or PayNow. Update your payment details in Profile → Bank Account.</p>
             </div>
 
             <div class="faq-item">
-                <h4>How do I update my bank details?</h4>
-                <p>Go to Profile → Bank Account. You can update your bank details at any time. Changes may require re-verification for security purposes.</p>
+                <h4>What is CPF contribution? (Singapore drivers)</h4>
+                <p>For Singapore drivers earning above S$500/month net, CPF contributions apply:</p>
+                <ul>
+                    <li>Worker contribution: 20% of net earnings</li>
+                    <li>Company co-contribution: 20%</li>
+                    <li>FEDA deduction: 60% (Car/Van/Lorry), 35% (Motorcycle), 20% (Bicycle)</li>
+                </ul>
+                <p>If below threshold, CPF is refunded to your available balance.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Where can I see my earnings history?</h4>
+                <p>Go to Earnings → Trip History to see all completed jobs with earnings breakdown, CPF deductions, and withdrawal history.</p>
             </div>
         </div>
 
-        <!-- Tier System -->
+        <!-- Account Types -->
         <div class="category">
             <div class="category-title">
-                <div class="category-icon">⭐</div>
-                <span>Tier System & Rewards</span>
+                <div class="category-icon">👥</div>
+                <span>Account Types</span>
             </div>
 
             <div class="faq-item">
-                <h4>How does the tier system work?</h4>
-                <p>Complete deliveries to earn points and advance through tiers: Basic → Bronze → Silver → Gold → Platinum. Higher tiers unlock better earnings multipliers and exclusive benefits.</p>
+                <h4>What are the different driver types?</h4>
+                <p>Smart Move supports multiple driver types:</p>
+                <ul>
+                    <li><strong>Regular Driver:</strong> Standard delivery driver with phone login</li>
+                    <li><strong>Fleet Driver:</strong> Works under a Fleet Manager with assigned jobs</li>
+                    <li><strong>Decal Driver:</strong> Specialized sticker/decal delivery (username: SMAD)</li>
+                    <li><strong>Emergency Driver:</strong> Responds to emergency requests (username: SME)</li>
+                    <li><strong>Agent:</strong> Earns referral commissions (username: SMA)</li>
+                </ul>
             </div>
 
             <div class="faq-item">
-                <h4>What are the tier benefits?</h4>
-                <p>Higher tiers offer: increased earnings per delivery, priority job matching, lower withdrawal fees, exclusive bonuses, and special promotions.</p>
-            </div>
-
-            <div class="faq-item">
-                <h4>Can I lose my tier status?</h4>
-                <p>Tier status is evaluated monthly. Maintaining good ratings, acceptance rate, and completion rate helps you keep and advance your tier.</p>
+                <h4>How do Fleet Drivers work?</h4>
+                <p>Fleet Drivers are created by Fleet Managers (companies). Jobs are assigned by the Fleet Manager. Earnings are tracked separately and managed by the fleet company.</p>
             </div>
         </div>
 
@@ -304,17 +411,22 @@
 
             <div class="faq-item">
                 <h4>How do I update my vehicle information?</h4>
-                <p>Go to Profile → Vehicle Info. You can update your vehicle details and upload new photos. Major vehicle changes may require re-verification.</p>
+                <p>Go to Profile → Vehicle Info. Update your vehicle details and upload new photos. Major changes may require re-verification.</p>
             </div>
 
             <div class="faq-item">
                 <h4>How do I change my phone number?</h4>
-                <p>Contact support at enquiry@smart-move.co to request a phone number change. This requires identity verification for security.</p>
+                <p>Contact support at enquiry@smart-move.co with your current phone number and the new number. This requires identity verification.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How do I update my bank details?</h4>
+                <p>Go to Profile → Bank Account. You can update your bank account number or PayNow ID. Changes may require verification for security.</p>
             </div>
 
             <div class="faq-item">
                 <h4>How do I delete my account?</h4>
-                <p>Go to Settings → Delete Account. Ensure all pending earnings are withdrawn first. Account deletion is processed within 30 days. This action cannot be undone.</p>
+                <p>Go to Settings → Delete Account. Ensure all pending earnings are withdrawn first. Deletion is processed within 30 days and cannot be undone.</p>
             </div>
         </div>
 
@@ -327,22 +439,41 @@
 
             <div class="faq-item">
                 <h4>The app is running slowly</h4>
-                <p>Try: 1) Close and restart the app, 2) Check your internet connection, 3) Update to the latest version, 4) Restart your device, 5) Clear app cache in device settings.</p>
+                <p>Try these steps:</p>
+                <ul>
+                    <li>Close and restart the app</li>
+                    <li>Check your internet connection</li>
+                    <li>Update to the latest app version</li>
+                    <li>Restart your device</li>
+                    <li>Clear app cache in device settings</li>
+                </ul>
             </div>
 
             <div class="faq-item">
                 <h4>I'm not receiving job notifications</h4>
-                <p>Check: 1) Notifications are enabled in device settings, 2) You're set to "Online" in the app, 3) Location services are enabled, 4) Battery optimization isn't blocking the app.</p>
+                <p>Check the following:</p>
+                <ul>
+                    <li>Notifications are enabled in device settings for Smart Move Driver</li>
+                    <li>You're set to "Online" in the app</li>
+                    <li>Location services are set to "Always Allow"</li>
+                    <li>Battery optimization isn't blocking the app (Android)</li>
+                    <li>Do Not Disturb mode is off</li>
+                </ul>
             </div>
 
             <div class="faq-item">
                 <h4>GPS/Location not working properly</h4>
-                <p>Ensure location is set to "Always Allow" for Smart Move Driver. Try toggling location services off and on. Make sure you're in an area with good GPS signal.</p>
+                <p>Ensure location is set to "Always Allow" for Smart Move Driver. Toggle location services off and on. Move to an area with better GPS signal (away from tall buildings).</p>
             </div>
 
             <div class="faq-item">
-                <h4>Navigation not showing correct route</h4>
-                <p>The app uses real-time traffic data. If the route seems incorrect, you can use your preferred navigation app by tapping the address to open in Maps.</p>
+                <h4>Chat messages not sending</h4>
+                <p>Check your internet connection. Files must be under 10MB (supported: JPG, PNG, PDF). Try closing and reopening the chat screen.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Biometric login not working</h4>
+                <p>Go to Settings → Biometric and disable, then re-enable the feature. Ensure Face ID/Fingerprint is set up in your device settings. If issues persist, use password login.</p>
             </div>
         </div>
 

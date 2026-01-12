@@ -93,6 +93,20 @@
             color: #888;
             font-size: 14px;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: #FFF8E7;
+            color: #3D2314;
+        }
         @media (max-width: 600px) {
             .content { padding: 20px; }
             .header h1 { font-size: 24px; }
@@ -114,7 +128,7 @@
     <div class="container">
         <div class="content">
             <h2>1. Introduction</h2>
-            <p>Smart Move Driver ("we," "our," or "us") is committed to protecting the privacy of our driver partners. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+            <p>Smart Move Driver ("we," "our," or "us") is committed to protecting the privacy of our driver partners. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application in Singapore and Malaysia.</p>
 
             <div class="highlight">
                 <strong>Important:</strong> By using Smart Move Driver, you consent to the data practices described in this policy.
@@ -124,127 +138,211 @@
 
             <h3>Personal Information</h3>
             <ul>
-                <li>Full name and contact information (phone number, email)</li>
-                <li>Profile photo and identification documents</li>
-                <li>Driver's license and vehicle registration</li>
-                <li>Bank account details for earnings withdrawal</li>
-                <li>Emergency contact information</li>
+                <li>Full name and date of birth</li>
+                <li>Phone number (+65 Singapore / +60 Malaysia)</li>
+                <li>Email address</li>
+                <li>Profile photo</li>
+                <li>Bank account number or PayNow identifier</li>
+                <li>CPF contribution details (Singapore drivers)</li>
             </ul>
 
-            <h3>Location Information</h3>
+            <h3>Identity & Verification Documents</h3>
             <ul>
-                <li>Real-time GPS location during active deliveries</li>
-                <li>Background location for job matching and tracking</li>
-                <li>Location history for trip records and earnings calculation</li>
+                <li>Driver's License (Front & Back)</li>
+                <li>Identity Card / NRIC (Front & Back)</li>
+                <li>Road Tax certificate</li>
+                <li>Log Card (vehicle logbook)</li>
             </ul>
 
             <h3>Vehicle Information</h3>
             <ul>
-                <li>Vehicle type, make, model, and year</li>
-                <li>License plate number</li>
-                <li>Vehicle photos and documentation</li>
+                <li>Vehicle type (Motorcycle, Car, Van, Lorry, Bike)</li>
+                <li>Vehicle make, model, and registration number</li>
+                <li>Vehicle photos (Front, Back, Left, Right views)</li>
+            </ul>
+
+            <h3>Location Information</h3>
+            <ul>
+                <li>Real-time GPS location during active deliveries (updates every 5 seconds)</li>
+                <li>Background location for job matching when online</li>
+                <li>Movement tracking with 10-meter precision</li>
+                <li>Pickup and dropoff location history</li>
             </ul>
 
             <h3>Usage and Performance Data</h3>
             <ul>
                 <li>Job acceptance and completion rates</li>
-                <li>Delivery times and routes taken</li>
-                <li>Customer ratings and feedback</li>
-                <li>App usage patterns and preferences</li>
+                <li>Delivery times and routes</li>
+                <li>Customer ratings (for tier qualification)</li>
+                <li>Earnings and withdrawal history</li>
+                <li>App usage patterns</li>
             </ul>
 
             <h2>3. How We Use Your Information</h2>
             <ul>
                 <li>Verify your identity and eligibility to drive</li>
-                <li>Match you with delivery jobs in your area</li>
+                <li>Match you with delivery jobs based on location and vehicle type</li>
                 <li>Provide real-time navigation and delivery tracking</li>
-                <li>Process your earnings and withdrawals</li>
-                <li>Calculate and display your performance metrics</li>
-                <li>Communicate job offers and important updates</li>
-                <li>Provide customer support and resolve disputes</li>
-                <li>Ensure safety and security for all users</li>
-                <li>Comply with legal and regulatory requirements</li>
-                <li>Improve our services and develop new features</li>
+                <li>Process your earnings and withdrawals via bank transfer or PayNow</li>
+                <li>Calculate CPF contributions (Singapore drivers)</li>
+                <li>Determine your tier status (Troop, Warrior, Champion)</li>
+                <li>Facilitate in-app chat with customers</li>
+                <li>Send push notifications for job offers and updates</li>
+                <li>Provide customer support</li>
+                <li>Comply with legal and tax requirements</li>
             </ul>
 
             <h2>4. Location Data Usage</h2>
             <div class="highlight">
-                <strong>Background Location:</strong> Smart Move Driver requires background location access to:
+                <strong>Background Location:</strong> Smart Move Driver requires "Always Allow" location permission to:
                 <ul style="margin-top: 10px;">
-                    <li>Show your availability to customers</li>
+                    <li>Show your availability to customers when you're online</li>
                     <li>Match you with nearby delivery jobs</li>
                     <li>Provide accurate ETAs to customers</li>
-                    <li>Track deliveries for safety and verification</li>
+                    <li>Track active deliveries for verification</li>
+                    <li>Calculate distance-based earnings</li>
                 </ul>
             </div>
-            <p>You can disable location access in your device settings, but this will prevent you from receiving and completing jobs.</p>
+            <p>Location data is stored in Firebase during active deliveries and cleared upon job completion. You can go offline in the app to stop location sharing.</p>
 
-            <h2>5. Information Sharing</h2>
-            <p>We may share your information with:</p>
+            <h2>5. CPF Contributions (Singapore)</h2>
+            <p>For Singapore-based drivers, we calculate and track CPF contributions:</p>
             <ul>
-                <li><strong>Customers:</strong> Your first name, vehicle type, photo, and real-time location during active deliveries</li>
-                <li><strong>Payment Processors:</strong> Stripe for earnings processing and withdrawals</li>
-                <li><strong>Service Providers:</strong> Cloud hosting, analytics, and communication services</li>
-                <li><strong>Legal Authorities:</strong> When required by law or to protect safety</li>
-                <li><strong>Business Partners:</strong> Aggregated, anonymized data for analytics</li>
+                <li>Minimum earnings threshold: S$500/month</li>
+                <li>Worker contribution rate: 20%</li>
+                <li>Company co-contribution rate: 20%</li>
+                <li>FEDA (Fixed Expense Deduction) rates:
+                    <ul>
+                        <li>Car/Van/Lorry: 60%</li>
+                        <li>Motorcycle: 35%</li>
+                        <li>Bicycle/On-foot: 20%</li>
+                    </ul>
+                </li>
             </ul>
+
+            <h2>6. Information Sharing</h2>
+            <p>We may share your information with:</p>
+
+            <table>
+                <tr>
+                    <th>Recipient</th>
+                    <th>Information Shared</th>
+                </tr>
+                <tr>
+                    <td>Customers</td>
+                    <td>First name, profile photo, vehicle type, real-time location during delivery</td>
+                </tr>
+                <tr>
+                    <td>Stripe (Payments)</td>
+                    <td>Bank details for earnings withdrawal, transaction data</td>
+                </tr>
+                <tr>
+                    <td>Firebase (Google)</td>
+                    <td>Account data, location, chat messages, documents</td>
+                </tr>
+                <tr>
+                    <td>Mapbox</td>
+                    <td>Location data for routing and maps</td>
+                </tr>
+                <tr>
+                    <td>OneMap (Singapore)</td>
+                    <td>Location data for Singapore-specific routing</td>
+                </tr>
+                <tr>
+                    <td>Fleet Managers</td>
+                    <td>Job status, earnings (for fleet drivers only)</td>
+                </tr>
+            </table>
 
             <div class="highlight">
                 <strong>We do not sell your personal information to third parties.</strong>
             </div>
 
-            <h2>6. Data Security</h2>
-            <p>We implement industry-standard security measures including:</p>
+            <h2>7. Data Security</h2>
+            <p>We implement security measures including:</p>
             <ul>
                 <li>SSL/TLS encryption for all data transmission</li>
-                <li>Encrypted storage of sensitive information</li>
-                <li>Firebase App Check and App Attest for app verification</li>
-                <li>Secure authentication with phone verification</li>
-                <li>Regular security audits and updates</li>
+                <li>Firebase App Check with App Attest (iOS) and Play Integrity (Android)</li>
+                <li>Encrypted storage for biometric credentials (device-only, not synced)</li>
+                <li>OTP verification for phone number authentication</li>
+                <li>Password requirements: 8+ characters with uppercase, lowercase, and numbers</li>
+                <li>Secure file upload (10MB limit, supported: JPG, PNG, PDF)</li>
             </ul>
 
-            <h2>7. Your Rights and Choices</h2>
+            <h2>8. Biometric Authentication</h2>
+            <p>If you enable Face ID or Fingerprint login:</p>
             <ul>
-                <li><strong>Access:</strong> Request a copy of your personal data</li>
-                <li><strong>Correction:</strong> Update inaccurate information in your profile</li>
-                <li><strong>Deletion:</strong> Request account deletion (processed within 30 days)</li>
-                <li><strong>Location:</strong> Manage location permissions in device settings</li>
-                <li><strong>Notifications:</strong> Control push notification preferences</li>
-                <li><strong>Marketing:</strong> Opt out of promotional communications</li>
+                <li>Credentials are stored encrypted in your device's secure enclave/keychain</li>
+                <li>Biometric data never leaves your device</li>
+                <li>We do not have access to your biometric information</li>
+                <li>You can disable this feature anytime in Settings</li>
             </ul>
 
-            <h2>8. Data Retention</h2>
+            <h2>9. Your Rights and Choices</h2>
             <ul>
-                <li><strong>Account Data:</strong> Retained while account is active + 90 days after deletion</li>
-                <li><strong>Trip Records:</strong> 3 years for dispute resolution</li>
-                <li><strong>Financial Records:</strong> 7 years for tax and legal compliance</li>
-                <li><strong>Location History:</strong> 90 days for active drivers</li>
+                <li><strong>Access:</strong> View your data in Profile and Earnings sections</li>
+                <li><strong>Correction:</strong> Update your profile, vehicle, and bank details</li>
+                <li><strong>Location Control:</strong> Go offline to stop location sharing</li>
+                <li><strong>Notifications:</strong> Manage push notification preferences in Settings</li>
+                <li><strong>Deletion:</strong> Request account deletion in Settings (processed within 30 days)</li>
             </ul>
 
-            <h2>9. Third-Party Services</h2>
-            <p>Our app integrates with the following services, each with their own privacy policies:</p>
+            <h2>10. Data Retention</h2>
+            <table>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Retention Period</th>
+                </tr>
+                <tr>
+                    <td>Account & Profile</td>
+                    <td>Until deletion + 90 days</td>
+                </tr>
+                <tr>
+                    <td>Verification Documents</td>
+                    <td>Until account deletion</td>
+                </tr>
+                <tr>
+                    <td>Location Data</td>
+                    <td>Real-time only during delivery</td>
+                </tr>
+                <tr>
+                    <td>Earnings & Transactions</td>
+                    <td>7 years (tax compliance)</td>
+                </tr>
+                <tr>
+                    <td>Chat Messages</td>
+                    <td>Permanent (for dispute resolution)</td>
+                </tr>
+                <tr>
+                    <td>Delivery Proof Photos</td>
+                    <td>3 years</td>
+                </tr>
+            </table>
+
+            <h2>11. Third-Party Services</h2>
+            <p>Our app integrates with these services (each has their own privacy policy):</p>
             <ul>
-                <li><a href="https://stripe.com/privacy" target="_blank">Stripe</a> - Payment processing</li>
-                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase</a> - Authentication and data storage</li>
-                <li><a href="https://www.mapbox.com/legal/privacy" target="_blank">Mapbox</a> - Maps and navigation</li>
+                <li><a href="https://stripe.com/privacy" target="_blank">Stripe</a> - Payment processing & PayNow</li>
+                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase</a> - Authentication, database, storage, messaging</li>
+                <li><a href="https://www.mapbox.com/legal/privacy" target="_blank">Mapbox</a> - Maps, routing, and geocoding</li>
                 <li><a href="https://www.onemap.gov.sg/legal/termsofuse.html" target="_blank">OneMap</a> - Singapore mapping services</li>
             </ul>
 
-            <h2>10. Children's Privacy</h2>
+            <h2>12. Children's Privacy</h2>
             <p>Smart Move Driver is intended for users 18 years and older. We do not knowingly collect information from anyone under 18.</p>
 
-            <h2>11. Regional Privacy Rights</h2>
+            <h2>13. Regional Privacy Rights</h2>
 
             <h3>Singapore (PDPA)</h3>
-            <p>Singapore residents have rights under the Personal Data Protection Act. Contact us at the email below to exercise your rights.</p>
+            <p>Singapore residents have rights under the Personal Data Protection Act 2012. You may access, correct, or request deletion of your data by contacting us.</p>
 
-            <h3>European Union (GDPR)</h3>
-            <p>EU residents have additional rights including data portability and the right to lodge a complaint with a supervisory authority.</p>
+            <h3>Malaysia (PDPA)</h3>
+            <p>Malaysian residents have rights under the Personal Data Protection Act 2010. Contact us to exercise your data rights.</p>
 
-            <h2>12. Changes to This Policy</h2>
-            <p>We may update this policy periodically. We will notify you of significant changes through the app or via email. Continued use after changes constitutes acceptance.</p>
+            <h2>14. Changes to This Policy</h2>
+            <p>We may update this policy periodically. We will notify you of significant changes through the app or via push notification. Continued use after changes constitutes acceptance.</p>
 
-            <h2>13. Contact Us</h2>
+            <h2>15. Contact Us</h2>
             <p>For privacy-related inquiries or to exercise your rights:</p>
             <ul>
                 <li><strong>Email:</strong> enquiry@smart-move.co</li>
